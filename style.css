@@ -7,5 +7,10 @@ h1{
 }
 
 .content{
+  position: absolute;
+  width: 600px;
+  height: 800px;
+  left: 50%;
+  top:50%;
   background-color: #3BBADB;
 }
