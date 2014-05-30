@@ -10,7 +10,8 @@ h1{
   position: absolute;
   width: 600px;
   height: 800px;
-  left: 50%;
-  top:50%;
+  top:50px;
+  left:50%;
+  margin-left: -300px;
   background-color: #3BBADB;
 }
