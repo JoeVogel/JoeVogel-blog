@@ -15,3 +15,8 @@ h1{
   margin-left: -300px;
   background-color: #3BBADB;
 }
+
+p{
+  position: absolute;
+  color: white;
+}
