@@ -1,0 +1,84 @@
+[
+	
+		{
+		  "title"      : "Hello World",
+		  "category"   : "",
+      "tags"       : "",
+		  "url"        : "/blog/hello-world/",
+		  "date"       : "2014-08-08 16:39:55 -0300",
+		  "shortdate"  : "August 08, 2014"
+		} ,
+	
+		{
+		  "title"      : "Override Author Byline Test Post",
+		  "category"   : "",
+      "tags"       : "sample-post, readability, and test",
+		  "url"        : "/articles/author-override/",
+		  "date"       : "2014-06-19 00:00:00 -0300",
+		  "shortdate"  : "June 19, 2014"
+		} ,
+	
+		{
+		  "title"      : "Syntax Highlighting Post",
+		  "category"   : "",
+      "tags"       : "sample-post, code, and highlighting",
+		  "url"        : "/articles/code-highlighting-post/",
+		  "date"       : "2013-08-16 00:00:00 -0300",
+		  "shortdate"  : "August 16, 2013"
+		} ,
+	
+		{
+		  "title"      : "Sample Link Post",
+		  "category"   : "",
+      "tags"       : "sample-post and link-post",
+		  "url"        : "/articles/sample-link-post/",
+		  "date"       : "2013-08-12 00:00:00 -0300",
+		  "shortdate"  : "August 12, 2013"
+		} ,
+	
+		{
+		  "title"      : "A Post with a Video",
+		  "category"   : "",
+      "tags"       : "sample-post and video",
+		  "url"        : "/articles/video-post/",
+		  "date"       : "2013-06-25 00:00:00 -0300",
+		  "shortdate"  : "June 25, 2013"
+		} ,
+	
+		{
+		  "title"      : "Post with Large Feature Image and Text",
+		  "category"   : "",
+      "tags"       : "sample-post and readability",
+		  "url"        : "/articles/readability-feature-post/",
+		  "date"       : "2013-05-23 00:00:00 -0300",
+		  "shortdate"  : "May 23, 2013"
+		} ,
+	
+		{
+		  "title"      : "A Post with Images",
+		  "category"   : "",
+      "tags"       : "sample-post, images, and test",
+		  "url"        : "/articles/sample-post-images/",
+		  "date"       : "2013-05-22 00:00:00 -0300",
+		  "shortdate"  : "May 22, 2013"
+		} ,
+	
+		{
+		  "title"      : "Testing Readability with a Bunch of Text",
+		  "category"   : "",
+      "tags"       : "sample-post, readability, test, and intro",
+		  "url"        : "/articles/readability-post/",
+		  "date"       : "2012-05-22 00:00:00 -0300",
+		  "shortdate"  : "May 22, 2012"
+		} ,
+	
+		{
+		  "title"      : "Sample Post",
+		  "category"   : "",
+      "tags"       : "sample-post",
+		  "url"        : "/articles/sample-post/",
+		  "date"       : "2011-03-10 00:00:00 -0300",
+		  "shortdate"  : "March 10, 2011"
+		} 
+	
+]
