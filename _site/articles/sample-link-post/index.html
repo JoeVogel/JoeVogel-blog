@@ -5,34 +5,34 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>About the Jekyll Theme &#8211; Site Title</title>
-<meta name="description" content="So Simple is a responsive Jekyll theme for your words and images.">
-
+<title>Sample Link Post &#8211; Site Title</title>
+<meta name="description" content="Example and code for using link posts.">
+<meta name="keywords" content="sample-post, link-post">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="About the Jekyll Theme">
-<meta name="twitter:description" content="So Simple is a responsive Jekyll theme for your words and images.">
+<meta name="twitter:title" content="Sample Link Post">
+<meta name="twitter:description" content="Example and code for using link posts.">
 
 
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/so-simple-sample-image-4.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/site-logo.png">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="About the Jekyll Theme">
-<meta property="og:description" content="So Simple is a responsive Jekyll theme for your words and images.">
-<meta property="og:url" content="/about/">
+<meta property="og:title" content="Sample Link Post">
+<meta property="og:description" content="Example and code for using link posts.">
+<meta property="og:url" content="/articles/sample-link-post/">
 <meta property="og:site_name" content="Site Title">
 
 
 
 
 
-<link rel="canonical" href="/about/">
+<link rel="canonical" href="/articles/sample-link-post/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Site Title Feed">
 
 
@@ -73,7 +73,7 @@
 
 </head>
 
-<body id="page">
+<body id="post">
 
 <div class="navigation-wrapper">
 	<nav role="navigation" id="site-nav" class="animated drop">
@@ -120,43 +120,54 @@
 </div><!-- ./search-wrapper -->
 
 <header class="masthead">
-	
-		<div class="wrap">
-			<a href="" class="site-logo" rel="home" title="Site Title"><img src="/images/site-logo.png" width="200" height="200" alt="Site Title logo" class="animated bounceInDown"></a>
-		</div>
-	
+	<div class="wrap">
+        
+    		<a href="" class="site-logo" rel="home" title="Site Title"><img src="/images/site-logo.png" width="200" height="200" alt="Site Title logo" class="animated fadeInUp"></a>
+        
+        <h1 class="site-title animated fadeIn"><a href="">Site Title</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">Describe your website here.</h2>
+	</div>
 </header><!-- /.masthead -->
-
 
 <div class="js-menu-screen menu-screen"></div>
 
 <div id="main" role="main">
-  <article class="entry">
-    <img src="/images/so-simple-sample-image-4.jpg" class="entry-feature-image" alt="About the Jekyll Theme" ><p class="image-credit">Photo Credit: <a href="http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/">WeGraphics</a>
+  <article class="hentry">
+    
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title">About the Jekyll Theme</h1>
+        <span class="entry-tags"><a href="/tags/#sample-post" title="Pages tagged sample-post">sample-post</a>&nbsp;&bull;&nbsp;<a href="/tags/#link-post" title="Pages tagged link-post">link-post</a></span>
+        
+          <h1 class="entry-title"><a href="http://mademistakes.com">Sample Link Post <span class="link-arrow">&rarr;</span></a></h1>
+        
       </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="/images/bio-photo.jpg" class="bio-photo" alt="Your Name bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Your Name</span></span>
+        <span class="entry-date date published"><time datetime="2013-08-12T00:00:00-03:00"><i class="fa fa-calendar-o"></i> August 12, 2013</time></span>
+        
+        
+        
+        
+      </footer>
       <div class="entry-content">
-        <p>Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be <strong>So Simple Theme</strong>, the follow up to <a href="http://mmistakes.github.io/minimal-mistakes"><strong>Minimal Mistakes</strong></a> — by designer slash illustrator <a href="http://mademistakes.com">Michael Rose</a>.</p>
+        <p>So Simple Theme now supports <strong>link posts</strong>, made famous by John Gruber. To activate just add <code>link: http://url-you-want-linked</code> to the post’s YAML front matter and you’re done.</p>
 
-<h2 id="so-simple-theme-is-all-about">So Simple Theme is all about:</h2>
-
-<ul>
-  <li>Responsive templates. Looking good on mobile, tablet, and desktop.</li>
-  <li>Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.</li>
-  <li>Minimal embellishments and subtle animations.</li>
-  <li>Optional large feature images for posts and pages.</li>
-  <li><a href="/404.html">Custom 404 page</a> to get you started.</li>
-  <li><a href="https://github.com/christian-fei/Simple-Jekyll-Search">Simple site search</a></li>
-  <li>Support for Disqus Comments</li>
-</ul>
-
-<p><a href="/theme-setup" class="btn">Install So Simple Theme</a></p>
-
-
+        
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="/articles/video-post/" class="btn" title="A Post with a Video">Previous</a>
+      
+      
+        <a href="/articles/code-highlighting-post/" class="btn" title="Syntax Highlighting Post">Next</a>
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
@@ -225,7 +236,7 @@
 
 
 
-          
+	        
 
 </body>
 </html>

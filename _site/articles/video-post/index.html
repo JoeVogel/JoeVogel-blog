@@ -5,34 +5,34 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>About the Jekyll Theme &#8211; Site Title</title>
-<meta name="description" content="So Simple is a responsive Jekyll theme for your words and images.">
-
+<title>A Post with a Video &#8211; Site Title</title>
+<meta name="description" content="Custom written post descriptions are the way to go... if you're not lazy.">
+<meta name="keywords" content="sample-post, video">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="About the Jekyll Theme">
-<meta name="twitter:description" content="So Simple is a responsive Jekyll theme for your words and images.">
+<meta name="twitter:title" content="A Post with a Video">
+<meta name="twitter:description" content="Custom written post descriptions are the way to go... if you're not lazy.">
 
 
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/so-simple-sample-image-4.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/site-logo.png">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="About the Jekyll Theme">
-<meta property="og:description" content="So Simple is a responsive Jekyll theme for your words and images.">
-<meta property="og:url" content="/about/">
+<meta property="og:title" content="A Post with a Video">
+<meta property="og:description" content="Custom written post descriptions are the way to go... if you're not lazy.">
+<meta property="og:url" content="/articles/video-post/">
 <meta property="og:site_name" content="Site Title">
 
 
 
 
 
-<link rel="canonical" href="/about/">
+<link rel="canonical" href="/articles/video-post/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Site Title Feed">
 
 
@@ -73,7 +73,7 @@
 
 </head>
 
-<body id="page">
+<body id="post">
 
 <div class="navigation-wrapper">
 	<nav role="navigation" id="site-nav" class="animated drop">
@@ -120,43 +120,75 @@
 </div><!-- ./search-wrapper -->
 
 <header class="masthead">
-	
-		<div class="wrap">
-			<a href="" class="site-logo" rel="home" title="Site Title"><img src="/images/site-logo.png" width="200" height="200" alt="Site Title logo" class="animated bounceInDown"></a>
-		</div>
-	
+	<div class="wrap">
+        
+    		<a href="" class="site-logo" rel="home" title="Site Title"><img src="/images/site-logo.png" width="200" height="200" alt="Site Title logo" class="animated fadeInUp"></a>
+        
+        <h1 class="site-title animated fadeIn"><a href="">Site Title</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">Describe your website here.</h2>
+	</div>
 </header><!-- /.masthead -->
-
 
 <div class="js-menu-screen menu-screen"></div>
 
 <div id="main" role="main">
-  <article class="entry">
-    <img src="/images/so-simple-sample-image-4.jpg" class="entry-feature-image" alt="About the Jekyll Theme" ><p class="image-credit">Photo Credit: <a href="http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/">WeGraphics</a>
+  <article class="hentry">
+    
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title">About the Jekyll Theme</h1>
+        <span class="entry-tags"><a href="/tags/#sample-post" title="Pages tagged sample-post">sample-post</a>&nbsp;&bull;&nbsp;<a href="/tags/#video" title="Pages tagged video">video</a></span>
+        
+          <h1 class="entry-title">A Post with a Video</h1>
+        
       </header>
+      <footer class="entry-meta">
+        
+        
+        
+          <img src="/images/bio-photo.jpg" class="bio-photo" alt="Your Name bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Your Name</span></span>
+        <span class="entry-date date published"><time datetime="2013-06-25T00:00:00-03:00"><i class="fa fa-calendar-o"></i> June 25, 2013</time></span>
+        
+        
+        
+        <span class="social-share-twitter">
+          <a href="https://twitter.com/intent/tweet?hashtags=sample-post,video&text=A%20Post%20with%20a%20Video&url=/articles/video-post/" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+        </span>
+        <span class="social-share-facebook">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=/articles/video-post/" title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+        </span>
+        <span class="social-share-googleplus">
+          <a href="https://plus.google.com/share?url=/articles/video-post/" title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+        </span>
+        <!-- /.social-share -->
+        
+        
+      </footer>
       <div class="entry-content">
-        <p>Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be <strong>So Simple Theme</strong>, the follow up to <a href="http://mmistakes.github.io/minimal-mistakes"><strong>Minimal Mistakes</strong></a> — by designer slash illustrator <a href="http://mademistakes.com">Michael Rose</a>.</p>
+        <iframe width="560" height="315" src="//www.youtube.com/embed/SqYiglufb8Y" frameborder="0"> </iframe>
 
-<h2 id="so-simple-theme-is-all-about">So Simple Theme is all about:</h2>
+<p>Video embeds are responsive and scale with the width of the main content block with the help of <a href="http://fitvidsjs.com/">FitVids</a>.</p>
 
-<ul>
-  <li>Responsive templates. Looking good on mobile, tablet, and desktop.</li>
-  <li>Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.</li>
-  <li>Minimal embellishments and subtle animations.</li>
-  <li>Optional large feature images for posts and pages.</li>
-  <li><a href="/404.html">Custom 404 page</a> to get you started.</li>
-  <li><a href="https://github.com/christian-fei/Simple-Jekyll-Search">Simple site search</a></li>
-  <li>Support for Disqus Comments</li>
-</ul>
+<p>Not sure if this only effects Kramdown or if it’s an issue with Markdown in general. But adding YouTube video embeds causes errors when building your Jekyll site. To fix add a space between the <code>&lt;iframe&gt;</code> tags and remove <code>allowfullscreen</code>. Example below:</p>
 
-<p><a href="/theme-setup" class="btn">Install So Simple Theme</a></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">&quot;560&quot;</span> <span class="na">height=</span><span class="s">&quot;315&quot;</span> <span class="na">src=</span><span class="s">&quot;http://www.youtube.com/embed/PWf4WUoMXwg&quot;</span> <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span></code></pre></div>
 
+<p>And here’s a Vimeo embed for testing purposes.</p>
 
+<iframe src="//player.vimeo.com/video/98146708?title=0&amp;byline=0" width="500" height="281" frameborder="0"> </iframe>
+
+        
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="/articles/readability-feature-post/" class="btn" title="Post with Large Feature Image and Text">Previous</a>
+      
+      
+        <a href="/articles/sample-link-post/" class="btn" title="Sample Link Post">Next</a>
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
@@ -225,7 +257,9 @@
 
 
 
-          
+  
+
+	        
 
 </body>
 </html>
