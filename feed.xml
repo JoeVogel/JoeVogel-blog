@@ -4,13 +4,32 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-11-02T12:49:07-02:00</updated>
+<updated>2014-11-15T17:42:14-02:00</updated>
 <id>/</id>
 <author>
   <name>Joe Jonas Vogel</name>
   <uri>/</uri>
   <email>joejvogel@gmail.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Arduino - SD Card]]></title>
+  <link rel="alternate" type="text/html" href="/blog/Arduino-SD-Card/" />
+  <id>/blog/Arduino-SD-Card</id>
+  <published>2014-11-15T09:15:00-02:00</published>
+  <updated>2014-11-15T09:15:00-02:00</updated>
+  <author>
+    <name>Joe Jonas Vogel</name>
+    <uri></uri>
+    <email>joejvogel@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Arduino - SD Card&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/blog/Arduino-SD-Card/&quot;&gt;Arduino - SD Card&lt;/a&gt; was originally published by Joe Jonas Vogel at &lt;a href=&quot;&quot;&gt;Joe Vogel&lt;/a&gt; on November 15, 2014.&lt;/p&gt;</content>
+</entry>
 
 
   

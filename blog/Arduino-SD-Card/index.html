@@ -5,15 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Últimos Posts &#8211; Joe Vogel</title>
-<meta name="description" content="Sou fascinado por TI e Robótica, creio que podemos ajudar muitas pessoas com essas duas areas.">
+<title>Arduino - SD Card &#8211; Joe Vogel</title>
 
+<meta name="keywords" content="">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Últimos Posts">
-<meta name="twitter:description" content="Sou fascinado por TI e Robótica, creio que podemos ajudar muitas pessoas com essas duas areas.">
+<meta name="twitter:title" content="Arduino - SD Card">
+
 <meta name="twitter:site" content="@joe_moonlight">
 <meta name="twitter:creator" content="@joe_moonlight">
 
@@ -23,16 +23,12 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="pt_BR">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Últimos Posts">
-<meta property="og:description" content="Sou fascinado por TI e Robótica, creio que podemos ajudar muitas pessoas com essas duas areas.">
-<meta property="og:url" content="/">
+<meta property="og:title" content="Arduino - SD Card">
+
+<meta property="og:url" content="/blog/Arduino-SD-Card/">
 <meta property="og:site_name" content="Joe Vogel">
 
-
-
-
-
-<link rel="canonical" href="/">
+<link rel="canonical" href="/blog/Arduino-SD-Card/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Joe Vogel Feed">
 <link rel="author" href="http://plus.google.com/+JoeVogel_07?rel=author">
 
@@ -43,6 +39,7 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/sourcecode.css">
 <!-- Webfonts -->
 <script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
 
@@ -73,27 +70,27 @@
 
 </head>
 
-<body id="page">
+<body id="post">
 
 <div class="navigation-wrapper">
 	<nav role="navigation" id="site-nav" class="animated drop">
 	    <ul>
-      
-		    
-		        
-		    
+
+
+
+
 		    <li><a href="/about/" >Sobre</a></li>
-		  
-		    
-		        
-		    
+
+
+
+
 		    <li><a href="/articles/" >Artigos</a></li>
-		  
-		    
-		        
-		    
+
+
+
+
 		    <li><a href="/blog/" >Blog</a></li>
-		  
+
         <li class="dosearch"><span><i class="fa fa-search"></i> Search</span></li>
 	    </ul>
 	</nav>
@@ -109,41 +106,116 @@
   </div><!-- /.search-form -->
 </div><!-- ./search-wrapper -->
 
-<header class="masthead">
-	<div class="wrap">
-        
-    		<a href="" class="site-logo" rel="home" title="Joe Vogel"><img src="/images/bio-photo.jpg" width="200" height="200" alt="Joe Vogel logo" class="animated fadeInUp"></a>
-        
-        <h1 class="site-title animated fadeIn"><a href="">Joe Vogel</a></h1>
-		<h2 class="site-description animated fadeIn" itemprop="description"></h2>
-	</div>
-</header><!-- /.masthead -->
-
 <div class="js-menu-screen menu-screen"></div>
 
 <div id="main" role="main">
-  <article class="entry">
-    
+  <article class="hentry">
+
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title">Últimos Posts</h1>
+        <span class="entry-tags"></span>
+
+          <h1 class="entry-title">Arduino - SD Card</h1>
+
       </header>
+      <footer class="entry-meta">
+
+          <img src="/images/bio-photo.jpg" class="bio-photo" alt="Joe Jonas Vogel bio photo"></a>
+
+        <span class="author vcard">By <span class="fn">Joe Jonas Vogel</span></span>
+        <span class="entry-date date published"><time datetime="2014-11-15T09:15:00-02:00"><i class="fa fa-calendar-o"></i> November 15, 2014</time></span>
+
+
+      </footer>
       <div class="entry-content">
-        <ul class="post-list">
 
-  <li><article><a href="/blog/Arduino-SD-Card/">Arduino - SD Card <span class="entry-date"><time datetime="2014-11-15T09:15:00-02:00">November 15, 2014</time></span></a></article></li>
+        <p>Neste post vou demonstrar como fazer o <a href="http://www.arduino.cc/">Arduino</a> ler e escrever dados em um cartão de memória SD.</p>
+        <p>Para isso estou utilizando:</p>
+        <ul>
+          <li>1x <a href="http://arduino.cc/en/Main/ArduinoBoardMega2560">Arduino Mega 2560</a> (Utilizei este pois é o que eu tenho, mas o experimento pode facilmente ser adaptado para outras placas);</li>
+          <li>1x <a href="http://www.lctech-inc.com/Hardware/Detail.aspx?id=0c3b6f7a-d101-4a60-8b56-3abfb7fd818d">LC Studio SD Card;</a></li>
+          <li>Alguns Jumpers macho/femea.</li>
+        </ul>
+        <p>Começaremos pelas conexões, esta operação é bem simples, apenas devemos nos atentar para realizar as conexões corretamente. A seguir uma imagem que demonstra as conexões necessárias:</p>
+        <img src="/images/esquema-arduino-sd-card.png" alt="Esquema de ligações" height="350" width="350" >
+        <p>Com os cabos devidamente conectados, vamos a parte divertida, programar o Arduino. A seguir vou explicar por partes o código responsável pela comunicação entre ambas as placas:</p>
+        <p>Primeiramente vamos importar a biblioteca SD.h que disponibiliza as funções necessárias para a escrita e leitura no cartão SD:</p>
+        <span class="code">#include < SD.h></span>
+        <p>Agora definimos as variáveis necessárias para nosso programa:</p>
+        <ul>
+          <li><i>myFile</i> do tipo <i>File</i> que armazenará o arquivo do cartão SD no qual faremos a escrita e leitura:</li>
+          <span class="code">File myFile;</span>
+          <li><i>chipSelect</i> do tipo <i>int</i>:</li>
+          <span class="code">const int chipSelect = 53;</span>
+        </ul>
+        <p>E agora vamos a execução. Neste exemplo a execução será feita uma única vez, pois coloquei os comandos na função <i>setup()</i></p>
+        <pre class="code">
+          void setup()
+          {
+            Serial.begin(9600);
+            Serial.print("\nInicializando Cartão SD...");
+            pinMode(chipSelect, OUTPUT);
 
-  <li><article><a href="/blog/hello-world/">Hello World <span class="entry-date"><time datetime="2014-10-31T17:39:55-02:00">October 31, 2014</time></span></a></article></li>
+            if (!SD.begin(chipSelect)) {
+              Serial.println("Inicialização Falhou!!");
+              return;
+            }
 
-</ul>
+            Serial.println("Inicializado.");
+
+            //Abrindo o arquivo. Apenas um arquivo pode ser aberto por vez,
+            //se tiver algum arquivo aberto,
+            //deve-se primeiro fechar o mesmo para que se possa abrir outro
+
+            myFile = SD.open("test.txt", FILE_WRITE);
+
+            //se o arquivo for aberto com sucesso, escreva nele.
+            if (myFile) {
+              Serial.print("Escrevendo no arquivo...");
+              myFile.println("Olá mundo no arquivo txt.");
+              // fechar o arquivo:
+              myFile.close();
+              Serial.println("Feito.");
+            } else {
+              //se o arquivo não abriu, imprima um erro:
+              Serial.println("Erro ao abrir o arquivo.");
+            }
+
+            //reabrindo o arquivo para leitura:
+            myFile = SD.open("test.txt");
+            if (myFile) {
+              Serial.println("test.txt:");
+              //Ler do arquivo se tiver algo nele:
+              while (myFile.available()) {
+                Serial.write(myFile.read());
+              }
+              //fechar o arquivo:
+              myFile.close();
+            } else {
+              //se o arquivo não abriu, imprima um erro:
+              Serial.println("Erro ao abrir o arquivo.");
+            }
+          }
+          void loop(){}
+        </pre>
+        <p>Para maior comodidade a imagem e o código estão no meu <a href="https://github.com/JoeVogel/Arduino-LCStudio_SDCard">GitHub</a>.</p>
+        <p>É isso ai pessoal. Espero ter ajudado e a qualquer dúvida não deixem de entrar em contato, no final da página estão os links com as formas de contato!</p>
+        <p>Que a força esteja com vocês!</p>
+
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+
+        <a href="/blog/hello-world/" class="btn" title="Hello World">Previous</a>
+
+
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
   <footer role="contentinfo" class="entry-wrapper">
-    
+
 
 <span>&copy; 2014 Joe Jonas Vogel. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/">So Simple Theme</a>.</span>
 <div class="social-icons">
@@ -151,11 +223,11 @@
 	<a href="http://facebook.com/joe.vogel.165" title="Joe Jonas Vogel on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
 	<a href="http://plus.google.com/+JoeVogel_07" title="Joe Jonas Vogel on Google+" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>
 	<a href="http://linkedin.com/in/joejonasvogel/55/790/5b2" title="Joe Jonas Vogel on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
-	
+
 	<a href="http://instagram.com/joejvogel" title="Joe Jonas Vogel on Instagram" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
-	
+
 	<a href="http://github.com/joevogel" title="Joe Jonas Vogel on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
-	
+
   <a href="/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
 </div><!-- /.social-icons -->
   </footer>
@@ -178,14 +250,14 @@
   });
 
   (function( $, window, undefined ) {
-    
+
      var bs = {
           close: $(".close-btn"),
           searchform: $(".search-form"),
           canvas: $(".js-menu-screen"),
           dothis: $('.dosearch')
       };
-    
+
     bs.dothis.on('click', function() {
       $('.search-wrapper').css({ display: "block" });
       $('body').toggleClass('no-scroll');
@@ -193,7 +265,7 @@
       bs.searchform.find('input').focus();
       bs.canvas.toggleClass('is-visible');
     });
-    
+
       bs.close.on('click', function() {
         $('.search-wrapper').removeAttr( 'style' );
         $('body').toggleClass('no-scroll');
@@ -206,7 +278,7 @@
 
 
 
-          
+
 
 </body>
 </html>
